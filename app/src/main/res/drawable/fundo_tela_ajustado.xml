@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Fundo adaptado para telas maiores que 320x480: o titulo DEADPOOL fica sempre
+     no topo (sem esticar na vertical) e a parede de tijolos continua ate o fim da tela. -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <bitmap
+            android:src="@drawable/fundo_tijolo"
+            android:tileMode="repeat" />
+    </item>
+    <item>
+        <bitmap
+            android:gravity="top|fill_horizontal"
+            android:src="@drawable/fundo_topo" />
+    </item>
+</layer-list>

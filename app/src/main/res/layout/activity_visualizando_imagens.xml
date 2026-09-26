@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- FrameLayout externo: no Android 15+ o app desenha atras da barra de status/titulo
+     (edge-to-edge). O fitsSystemWindows empurra o conteudo para baixo da barra. -->
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:fitsSystemWindows="true"
+    tools:context=".VisualizandoImagensActivity">
+
+<RelativeLayout
+    android:id="@+id/activity_visualizando_imagens"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fundo_tela_ajustado">
+
+    <ImageSwitcher
+        android:layout_width="match_parent"
+        android:layout_marginTop="56dp"
+        android:layout_height="175dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/imgFoto" />
+
+    <ImageSwitcher
+        android:layout_width="match_parent"
+        android:id="@+id/imgSobre"
+        android:layout_height="120dp"
+        android:layout_below="@+id/imgFoto"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/imgSobre"
+        android:id="@+id/layoutBotoes"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btanterior"
+            style="@android:style/Widget.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/anterior" />
+
+        <Button
+            android:id="@+id/btproximo"
+            style="@android:style/Widget.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/proximo" />
+    </LinearLayout>
+</RelativeLayout>
+
+</FrameLayout>
